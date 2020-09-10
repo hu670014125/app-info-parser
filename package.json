@@ -1,10 +1,10 @@
 {
   "name": "app-info-parser",
-  "version": "0.3.11",
+  "version": "0.3.2",
   "description": "Exact info from apk or ipa file.",
   "main": "./src/index.js",
   "scripts": {
-    "test": "node ./example/node.js",
+    "test": "node ./example/npm-use.js",
     "build": "rimraf src/* && babel lib -d src",
     "build:browser": "rimraf dist/* && browserify lib/index.js -t [ babelify ] -s AppInfoParser -d | exorcist ./dist/app-info-parser.js.map | derequire > dist/app-info-parser.js",
     "minify": "uglifyjs ./dist/app-info-parser.js -o ./dist/app-info-parser.min.js -c -m --source-map \"url='./dist/app-info-parser.mini.js.map'\"",

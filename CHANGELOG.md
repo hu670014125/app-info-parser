@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.3.11"></a>
+### [0.3.2] (2020-09-10)
+```
+1.修复部分Android APK 无法获取图标的问题。【如：微信】
+```
+
 ### [0.3.11](https://github.com/chenquincy/app-info-parser/compare/v0.3.10...v0.3.11) (2020-07-31)
 
 ### [0.3.10](https://github.com/chenquincy/app-info-parser/compare/v0.3.9...v0.3.10) (2020-05-11)
