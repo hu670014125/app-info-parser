@@ -105,12 +105,12 @@ var ApkParser = /*#__PURE__*/function (_Zip) {
             }
 
             apkInfo['projectInfo'] = {
-              "package": apkInfo["package"],
+              packageName: apkInfo["package"],
               versionCode: apkInfo.versionCode,
               versionName: apkInfo.versionName,
               minSdkVersion: apkInfo.usesSdk.minSdkVersion,
               targetSdkVersion: apkInfo.usesSdk.targetSdkVersion,
-              name: appName,
+              appName: appName,
               icon: '',
               type: 'Android'
             };
@@ -331,12 +331,12 @@ var IpaParser = /*#__PURE__*/function (_Zip) {
 
           plistInfo.mobileProvision = provisionInfo;
           plistInfo['projectInfo'] = {
-            "package": plistInfo.CFBundleIdentifier,
+            packageName: plistInfo.CFBundleIdentifier,
             versionCode: plistInfo.CFBundleVersion,
             versionName: plistInfo.CFBundleShortVersionString,
             minSdkVersion: plistInfo.MinimumOSVersion,
             targetSdkVersion: plistInfo.DTSDKName,
-            name: plistInfo.CFBundleDisplayName || plistInfo.CFBundleName,
+            appName: plistInfo.CFBundleDisplayName || plistInfo.CFBundleName,
             icon: '',
             type: 'IOS'
           }; // find icon path and parse icon
@@ -479,12 +479,12 @@ var MiniProgram = /*#__PURE__*/function (_Zip) {
           try {
             var info = JSON.parse(buffers[ConfigName].toString());
             info['projectInfo'] = {
-              "package": info.appid,
+              packageName: info.appid,
               versionCode: info.customInfo.versionCode,
               versionName: info.customInfo.versionName,
               minSdkVersion: info.libVersion,
               targetSdkVersion: info.libVersion,
-              name: info.description,
+              appName: info.description,
               icon: info.customInfo.icon,
               type: 'MiniProgram'
             };
