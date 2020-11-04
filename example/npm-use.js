@@ -10,9 +10,13 @@ apkInfoParser.parse().then(result => {
 })
 
 // AppInfoParser parse ipa
-// const ipaInfoParser = new AppInfoParser('/Users/huqs/Desktop/vl-ios-app.ipa')
-const ipaInfoParser = new AppInfoParser('/Users/huqs/Desktop/微信_7.0.15.ipa')
+const ipaInfoParser = new AppInfoParser('/Users/huqs/Desktop/vl-ios-app.ipa')
+// const ipaInfoParser = new AppInfoParser('/Users/huqs/Desktop/as.ipa')
+// const ipaInfoParser = new AppInfoParser('/Users/huqs/Desktop/今日头条_7.9.4.ipa')
+// const ipaInfoParser = new AppInfoParser('/Users/huqs/Desktop/微信_7.0.15.ipa')
 ipaInfoParser.parse().then(result => {
+  delete result['icon']
+  // delete result['projectInfo']
   console.log('info ----> ', result)
   // console.log('icon base64 ----> ', result.icon)
 }).catch(e => {
